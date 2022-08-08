@@ -4,7 +4,7 @@
   "description": "cadastro de colaborsdores ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./index.js"
   },
   "keywords": [],
   "author": "Alx Ferreira by FreeCode-Br",

@@ -1,5 +1,5 @@
 const express = require('express');
-const employees = require('./controller/employees');
+const employees = require('./src/controller/employees');
 const cors = require('cors');
 
 const server = express();
@@ -14,6 +14,8 @@ server.get('/employee_txt/:txtSearch', employees.readEmployeeTxt);
 server.get('/employee_cpf', employees.readEmployeeCpf);
 server.put('/employee', employees.updateEmployee);
 server.delete('/employee', employees.deleteEmployee);
+
+
 
 server.listen(3333, () => {
   console.log(`servidor online na porta ${port}`)

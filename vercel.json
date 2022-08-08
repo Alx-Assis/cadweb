@@ -9,7 +9,7 @@
   "routes": [
       {
         "src": "/(,*)",
-        "dest": "/employee_txt/"
+        "dest": "/"
       }
   ]
 }
