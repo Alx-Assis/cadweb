@@ -3,7 +3,7 @@ const employees = require('./src/controller/employees');
 const cors = require('cors');
 
 const server = express();
-const port = 3333;
+const port = 8080;
 
 server.use(express.json());
 server.use(cors());
