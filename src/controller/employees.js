@@ -95,15 +95,15 @@ module.exports = {
 
   async deleteEmployee(req, res) {
     const cpfAuthorization = req.headers.authorization;
-     const  employee  = await connection('employees').where('cpf',cpfAuthorization).select('cpf','name').first();
-    try{
-      if(employee.cpf==cpfAuthorization){
-      await connection('employees').where('cpf',cpfAuthorization).delete()
-      return res.status(200).json({ employee,message: "produt0 excluido da base de dados" });
-      }; 
-  }catch(e) {
-    return res.status(404).json({message: `produto cod.:${employee} no encontrado` })
-
-  }
+    const employee = await connection('employees').where('cpf', cpfAuthorization).select('cpf', 'name').first();
+    try {
+      if (employee.cpf === cpfAuthorization) {
+        await connection('employees').where('cpf', cpfAuthorization).delete();
+      return res.status(200).json({ employee, message: 'produt0 excluido da base de dados' });
+      } 
+    } catch(e) {
+      return res.status(404).json({ message: `produto cod.:${employee} no encontrado` });
+    }
+    return res.send(":(")  
   }
 };

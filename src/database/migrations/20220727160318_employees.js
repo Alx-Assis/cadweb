@@ -9,7 +9,7 @@ exports.up = function (knex) {
     table.string('cpf').primary();
     table.string('email').notNullable();
     table.string('whatsApp').notNullable();
-    table.string('Address').notNullable();
+    table.string('Address').notNullable();x
   })
   
 };
