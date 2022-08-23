@@ -7,7 +7,7 @@ const employees = require('./src/controller/employees');
 const server = express();
 
 
-const port = process.env.NODE_DEVELOPMENTe || 8080
+const port = process.env.NODE_DEVELOPMENTe || 5432
 
 server.use(express.json({ extended: false }));
 server.use(cors());
